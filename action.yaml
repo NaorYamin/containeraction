@@ -1,6 +1,7 @@
 name: 'my first container action' 
 description: 'this is lab' 
 author: 'Naor Yamin' 
+
 inputs:
   myInput:
     description: 'Greeting to use' 
