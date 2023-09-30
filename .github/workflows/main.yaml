@@ -1,0 +1,25 @@
+on: [push] 
+
+jobs: 
+  my-job: #this is the job ID
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3 #This action lets to checkout to the repo 
+
+      - name: run the action
+        id: hello 
+        uses: ./ 
+        with:
+          myInput: "Naor Yamin" #It replaces the myInpurt var that exists in action.yaml file. 
+
+
+      - name: output
+        run: |
+          echo ${{ steps.hello.outputs.memory}} 
+          echo "total memory sucssefully output" 
+
+      
+   
+
+  
